@@ -34,7 +34,8 @@ public class User {
 
     private String mobileNo;
 
-    @Column(unique = true)
+
+    @Column(name="EmailId",unique = true)
     private String emailId;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)

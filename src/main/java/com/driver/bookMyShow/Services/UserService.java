@@ -26,6 +26,7 @@ public class UserService {
         if(userRepository.findByEmailId(userEntryDto.getEmailId()) != null) {
             throw new UserAlreadyExistsWithEmail();
         }
+
         User user = UserTransformer.userDtoToUser(userEntryDto);
 
         userRepository.save(user);
